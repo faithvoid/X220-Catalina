@@ -38,7 +38,7 @@ Virtually everything that isn't listed below.
 - Once the installation is fully complete, reboot back into the USB, boot into the Catalina installer on the USB again and run the macOS Post-Install Patch tool with it's default options. This is important to get 512+MB of VRAM on the HD 3000 (as oppose to 384MB) and to generally rebuild the kext cache, so don't skip this part even though you're so close to the desktop!
 - Once the patcher is done, boot into macOS, install whatever patches the Patch Updater may ask you to.
 - Once you're booted into the macOS, go into the "Other" folder on your USB and install the HeliPort application to get Wi-Fi up and running.
-- To finalize everything, run Clover Configurator, mount your macOS EFI partition with it and use the Clover Cloner function to clone the EFI partition of your USB to the EFI partition of your HDD.
+- To finalize everything, run Clover Configurator, mount your macOS EFI partition with it and use the Clover Cloner function to clone the EFI partition of your USB to the EFI partition of your HDD. You should now be able to boot into a perfectly usable version of macOS directly from your HDD/SSD!
 
 ## Troubleshooting
 - Vertical Lines Showing Up / Occasional Hangs: This is usually caused by either too little RAM or (slightly) faulty RAM. The latest versions of macOS don't handle RAM error correction as well as Sierra and prior, so if this happens it's most likely a RAM issue. I'd recommend starting with a minimum of 8GB of RAM for a stable experience. This problem appears to plague any device with an HD3000 and isn't just exclusive to Thinkpads.
