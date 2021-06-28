@@ -34,7 +34,7 @@ Virtually everything that isn't listed below.
 - Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), use dosdude1's Catalina patcher to create a bootable 16+GB USB device. 
 - Once the device has been created, go to the EFI partition of the USB device and replace the contents with the EFI folder of this repository.
 - Boot into macOS, go to Disk Utility, then format your disk of choice as either APFS or HFS **(DO NOT USE ENCRYPTION. You will not be able to boot into the rest of the installation! You MAY be able to convert it later, but the EFI files provided will not allow you to boot an encrypted drive! I wasted 8 hours of my life before I figured this out, please don't do the same.)**
-- Begin the instalaltion as normal. Once the system reboots, boot back into the USB and select the drive you installed macOS on (not preboot as this may hang the system).
+- Begin the installation as normal. Once the system reboots, boot back into the USB and select the drive you installed macOS on (not preboot as this may hang the system).
 - Once the installation is fully complete, reboot back into the USB, boot into the Catalina installer on the USB again and run the macOS Post-Install Patch tool with it's default options. This is important to get 512+MB of VRAM on the HD 3000 (as oppose to 384MB) and to generally rebuild the kext cache, so don't skip this part even though you're so close to the desktop!
 - Once the patcher is done, boot into macOS, install whatever patches the Patch Updater may ask you to.
 - Once you're booted into the macOS, go into the "Other" folder on your USB and install the HeliPort application to get Wi-Fi up and running.
