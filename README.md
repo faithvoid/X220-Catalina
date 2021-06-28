@@ -49,7 +49,7 @@ Virtually everything that isn't listed below.
 - Move from Clover to OpenCore (I would absolutely love help with this to futureproof easily running macOS on the 220 series and keep these machines alive!).
 - Possibly create an alternate config.plist to disable touchscreens on the X220T if you're like me and have a shattered digitizer. If you have any knowledge as to how to disable a single USB port / hub on macOS (ideally using Clover), please let me know!
 - Figure out if it's safe on the X220 to raise the macOS VRAM amount from 512MB to 1GB for faster video acceleration, as there are plenty of guides on how to do it for official Macbooks of the same specs (useful for things like video/photo editing, not so useful for gaming! The main caveat being of course that's 512MB less RAM for the system to use.)
-- See if this setup works on macOS Big Sur or not (it probably won't, and I won't try any time soon, but if anyone wants to give it a shot using BenSova's Big Sur patcher instead of dosdude1's Catalina patcher please report back!)
+- See if this setup works on macOS Big Sur or not (it probably won't, and I won't try any time soon due to hearing that Sur is unstable even on real hardware, but if anyone wants to give it a shot using BenSova's Big Sur patcher instead of dosdude1's Catalina patcher please report back!)
 
 ## Resources:
 - dosdude1's Catalina patcher: http://dosdude1.com/catalina/
