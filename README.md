@@ -42,7 +42,7 @@ Virtually everything that isn't listed below.
 
 ## Troubleshooting
 - Vertical Lines Showing Up / Occasional Hangs: This is usually caused by either too little RAM or (slightly) faulty RAM. The latest versions of macOS don't handle RAM error correction as well as Sierra and prior, so if this happens it's most likely a RAM issue. I'd recommend starting with a minimum of 8GB of RAM for a stable experience. This problem appears to plague any device with an HD3000 and isn't just exclusive to Thinkpads.
-- AirPort doesn't work: Replace the "itlwm" kext in your EFI/Clover with the "AirportItlwm.kext" file in the "Other" folder of the repo. Please note that this may noticeably tank your internet speeds, so I've set itlwm as the default to ensure stability/performance.
+- AirPort doesn't work: Replace the "itlwm" kext in your EFI/Clover with the "AirportItlwm.kext" file in the "Other" folder of the repo. Please note that this may noticeably tank your internet speeds, so I've set itlwm as the default to ensure stability/performance. **DO NOT USE BOTH DRIVERS AT ONCE. You'll probably crash your system.**
 - To use the trackpoint middle click to scroll, you'll want an app such as Smart Scroll. If you know a working free (or better yet, FOSS) alternative, please let me know, as Smart Scroll requires a paid license after a limited time trial.
 
 ## TODO:
