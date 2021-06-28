@@ -27,6 +27,7 @@ Virtually everything that isn't listed below.
 - Facetime / iMessage / etc. (I don't have an iPhone to use iMessage with so YMMV. You'll most likely need an intricate knowledge of modifying your config.plist with valid serial numbers to get either of these to work, as I've never gotten this to work on the first attempt of any Hackintosh.)
 - Mini-Displayport output
 - Bluetooth Hand-Off (due to no Bluetooth support at the moment.)
+- Airport (read under troubleshooting to give it a shot!)
 - Lots of other things, I'm sure. 
 
 # TL;DR Installation Guide (there are more concrete guides online, but this is a short step-by-step that assumes you have at least a fledgling amount of Hackintosh literacy.)
