@@ -32,6 +32,9 @@ Virtually everything that isn't listed below.
 - Lots of other things, I'm sure. 
 
 # TL;DR Installation Guide (there are more concrete guides online, but this is a short step-by-step that assumes you have at least a fledgling amount of Hackintosh literacy.)
+
+*Please note that you take full responsibility for any potential hardware damage, data loss, house fires, nuclear wars, etc. that following any of the steps in this guide may cause. I've written these steps out in laymens terms, but if there's any doubt in your mind about a step, please consult Google.* 
+
 - Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), use dosdude1's Catalina patcher to create a bootable 16+GB USB device. 
 - Once the device has been created, go to the EFI partition of the USB device and replace the contents with the EFI folder of this repository.
 - Boot into macOS, go to Disk Utility, then format your disk of choice as either APFS or HFS **(DO NOT USE ENCRYPTION. You will not be able to boot into the rest of the installation! You MAY be able to convert it later, but the EFI files provided will not allow you to boot an encrypted drive! I wasted 8 hours of my life before I figured this out, please don't do the same.)**
