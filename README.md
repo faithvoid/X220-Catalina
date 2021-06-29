@@ -1,5 +1,5 @@
 # Lain's X220 macOS Catalina Repository
-A repository of information and kexts for running macOS Mojave on Thinkpad X/T/L420 laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
+A repository of information and kexts for running macOS Mojave on Thinkpad X/T/L420 laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver, ideally without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
 
 *Please be respectful of the fact that I may not be able to provide too much support for this. I'll update it regularly as new discoveries and modifications are made, but I very frequently take breaks from GitHub due to health issues and cannot be relied on for tech support. Consider this repo a starting point more than a finished product until stated otherwise. Thank you and stay safe!*
 
@@ -18,16 +18,17 @@ If you would like to donate so I can test out additional Thinkpad hardware (incl
 Virtually everything that isn't listed below.
 
 ## What Doesn't Work:
-- Bluetooth (Not sure why, any advice on this matter would be appreciated! Probably just missing a kext or two.)
-- X220T: Tablet Screen Buttons (I know there's definietly a way to remap them, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
+- Bluetooth (Not sure why, any advice on this matter would be appreciated! Probably just missing a kext or two. Using BrcmPatchRAM3 and it's additional kexts doesn't seem to change anything, but YMMV.)
 - Encrypted Partitions: I don't know if my macOS USB is just faulty or what, but during my initial installations neither APFS Encrypted nor HFS encrypted would allow me to finish the installation. This may just be an oversight on my end, but don't try to encrypt your drive if you're not prepared to troubleshoot (using -v in Clover didn't provide me too much human-readable 
 - The touchpad settings screen is just blank, so you can't modify any options. There are definitely dozens of threads on many forums about this issue and possible solutions, I just haven't bothered with any yet since the default settings work well enough for me.
+- X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
 
 ## Untested:
 - Facetime / iMessage / etc. (I don't have an iPhone to use iMessage with so YMMV. You'll most likely need an intricate knowledge of modifying your config.plist with valid serial numbers to get either of these to work, as I've never gotten this to work on the first attempt of any Hackintosh.)
 - Mini-Displayport output
 - Bluetooth Hand-Off (due to no Bluetooth support at the moment.)
 - Airport (read under troubleshooting to give it a shot!)
+- ExpressCard (I don't have the monetary resources to acquire any ExpressCard devices to test, if you'd like to donate $20 to order one for testing check the link above!)
 - Lots of other things, I'm sure. 
 
 # TL;DR Installation Guide (there are more concrete guides online, but this is a short step-by-step that assumes you have at least a fledgling amount of Hackintosh literacy.)
