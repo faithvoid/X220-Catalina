@@ -3,6 +3,8 @@ A repository of information and kexts for running macOS Mojave on the Thinkpad X
 
 *Please be respectful of the fact that I may not be able to provide too much support for this. I'll update it regularly as new discoveries and modifications are made, but I very frequently take breaks from GitHub due to health issues and cannot be relied on for tech support. Consider this repo a starting point more than a finished product until stated otherwise. Thank you and stay safe!*
 
+![Screenshot from my trusty X220 running Catalina!](x220catalina.png)
+
 If you would like to donate so I can test out additional Thinkpad hardware (including repairing my X1C1 to further optimize macOS potential), my PayPal is [here!](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=8GF4A3XS7ZHFY) 
 
 ## Lain's X220T Specs:
