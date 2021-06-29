@@ -1,11 +1,11 @@
 # Lain's X220 macOS Catalina Repository
-A repository of information and kexts for running macOS Mojave on Thinkpad X/T/L420 laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver, ideally without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
+A repository of information and kexts for running macOS Mojave on the Thinkpad X220 (and T420/T520/L420/L520) series of laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver, ideally without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
 
 *Please be respectful of the fact that I may not be able to provide too much support for this. I'll update it regularly as new discoveries and modifications are made, but I very frequently take breaks from GitHub due to health issues and cannot be relied on for tech support. Consider this repo a starting point more than a finished product until stated otherwise. Thank you and stay safe!*
 
 If you would like to donate so I can test out additional Thinkpad hardware (including repairing my X1C1 to further optimize macOS potential), my PayPal is [here!](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=8GF4A3XS7ZHFY) 
 
-# Lain's X220T Specs:
+## Lain's X220T Specs:
 - Model: N/A (coming soon!)
 - BIOS: McDonellTech's modified v1.46 BIOS (not fully necessary in case you're worried about bricking your system, but will definitely help improve RAM speeds, CPU performance and battery life in macOS. The BIOS installation will fail a few times so keep your laptop connected and let it run it's course until it reboots!)
 - CPU: Intel Core i5-2520M @ 2.5GHz
