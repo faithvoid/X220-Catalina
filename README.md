@@ -31,6 +31,7 @@ Virtually everything that isn't listed below.
 - Bluetooth Hand-Off (due to no Bluetooth support at the moment.)
 - Airport (read under troubleshooting to give it a shot!)
 - ExpressCard (I don't have the monetary resources to acquire any ExpressCard devices to test, if you'd like to donate $20 to order one for testing check the link above!)
+- Compatibility with modifications such as Coreboot, USB-C charging (should be fine as it theoretically doesn't change how the software interfaces w/ the charger but YMMV), screen mods, etc. Such modifications may require additional DDST/SDST patching.
 - Lots of other things, I'm sure. 
 
 # TL;DR Installation Guide (there are more concrete guides online, but this is a short step-by-step that assumes you have at least a fledgling amount of Hackintosh literacy.)
