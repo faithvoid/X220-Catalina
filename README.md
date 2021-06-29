@@ -24,7 +24,7 @@ Virtually everything that isn't listed below.
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
 
 ## Untested:
-- Facetime / iMessage / etc. (I don't have an iPhone to use iMessage with so YMMV. You'll most likely need an intricate knowledge of modifying your config.plist with valid serial numbers to get either of these to work, as I've never gotten this to work on the first attempt of any Hackintosh.)
+- Facetime / iMessage / etc. (If you want to get it working, you'll need to generate a new serial key using something such as osx-serial-generator and look up a seperate guide to get these things working on a Catalina Hackintosh. I don't use these features so I can't provide support at the moment.)
 - Mini-Displayport output
 - Bluetooth Hand-Off (due to no Bluetooth support at the moment.)
 - Airport (read under troubleshooting to give it a shot!)
@@ -35,7 +35,7 @@ Virtually everything that isn't listed below.
 
 *Please note that you take full responsibility for any potential hardware damage, data loss, house fires, nuclear wars, etc. that following any of the steps in this guide may cause. I've written these steps out in laymens terms, but if there's any doubt in your mind about a step, please consult Google.* 
 
-- Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), use dosdude1's Catalina patcher to create a bootable 16+GB USB device. 
+- Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), use dosdude1's Catalina patcher to create a bootable 16+GB USB device. It's essential to use this patcher to ensure that all of the hardware functions properly, and you may not be able to successfully boot without using it. 
 - Once the device has been created, go to the EFI partition of the USB device and replace the contents with the EFI folder of this repository.
 - Boot into macOS, go to Disk Utility, then format your disk of choice as either APFS or HFS **(DO NOT USE ENCRYPTION. You will not be able to boot into the rest of the installation! You MAY be able to convert it later, but the EFI files provided will not allow you to boot an encrypted drive! I wasted 8 hours of my life before I figured this out, please don't do the same.)**
 - Begin the installation as normal. Once the system reboots, boot back into the USB and select the drive you installed macOS on (not preboot as this may hang the system).
