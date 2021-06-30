@@ -1,5 +1,5 @@
 # Lain's X220 macOS Catalina Repository
-A repository of information and kexts for running macOS Mojave on the Thinkpad X220 (and T420/T520/L420/L520) series of laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver, ideally without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
+A repository of information and kexts for running macOS Catalina on the Thinkpad X220 (and T420/T520/L420/L520) series of laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver, ideally without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
 
 *Please be respectful of the fact that I may not be able to provide too much support for this. I'll update it regularly as new discoveries and modifications are made, but I very frequently take breaks from GitHub due to health issues and cannot be relied on for tech support. Consider this repo a starting point more than a finished product until stated otherwise. Thank you and stay safe!*
 
