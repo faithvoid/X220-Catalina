@@ -17,13 +17,15 @@ If you would like to donate so I can test out additional Thinkpad hardware (incl
 - Wireless Card: Intel Corporation Centrino Advanced-N 6205 
 
 ## What Works:
-Virtually everything that isn't listed below.
+Virtually everything that isn't listed below. I would consider it stable enough for daily driver use, but I wouldn't say it's stable enough for mission-critical tasks (ie; 24/7 web server).
 
 ## What Doesn't Work:
 - Bluetooth (Not sure why, any advice on this matter would be appreciated! Probably just missing a kext or two. Using BrcmPatchRAM3 and it's additional kexts doesn't seem to change anything, but YMMV.)
+- Microphone Volume Adjustment (this may just be an issue with the internal sound card, I haven't tested with an external sound card yet.)
 - Encrypted Partitions: I don't know if my macOS USB is just faulty or what, but during my initial installations neither APFS Encrypted nor HFS encrypted would allow me to finish the installation. This may just be an oversight on my end, but don't try to encrypt your drive if you're not prepared to troubleshoot (using -v in Clover didn't provide me too much human-readable information.)
 - The touchpad settings screen is just blank, so you can't modify any options. This is due to the modified VoodooPS2Controller kext designed specifically for the X220 touchpad. Usually the solution to this issue would be replacing the kext with an official version, but the official version doesn't work well with the X220 touchpad (jumpy/erratic behaviour when clicking/scrolling, unbearably slow trackpoint speed etc.)
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
+- SD Card Reader (Probably just requires VoodooSDHC.kext, I haven't had time to test.)
 
 ## Untested:
 - Facetime / iMessage / etc. (If you want to get it working, you'll need to generate a new serial key using something such as osx-serial-generator and look up a seperate guide to get these things working on a Catalina Hackintosh. I don't use these features so I can't provide support at the moment.)
