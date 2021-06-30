@@ -21,13 +21,13 @@ Virtually everything that isn't listed below.
 
 ## What Doesn't Work:
 - Bluetooth (Not sure why, any advice on this matter would be appreciated! Probably just missing a kext or two. Using BrcmPatchRAM3 and it's additional kexts doesn't seem to change anything, but YMMV.)
-- Encrypted Partitions: I don't know if my macOS USB is just faulty or what, but during my initial installations neither APFS Encrypted nor HFS encrypted would allow me to finish the installation. This may just be an oversight on my end, but don't try to encrypt your drive if you're not prepared to troubleshoot (using -v in Clover didn't provide me too much human-readable 
+- Encrypted Partitions: I don't know if my macOS USB is just faulty or what, but during my initial installations neither APFS Encrypted nor HFS encrypted would allow me to finish the installation. This may just be an oversight on my end, but don't try to encrypt your drive if you're not prepared to troubleshoot (using -v in Clover didn't provide me too much human-readable information.)
 - The touchpad settings screen is just blank, so you can't modify any options. This is due to the modified VoodooPS2Controller kext designed specifically for the X220 touchpad. Usually the solution to this issue would be replacing the kext with an official version, but the official version doesn't work well with the X220 touchpad (jumpy/erratic behaviour when clicking/scrolling, unbearably slow trackpoint speed etc.)
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
 
 ## Untested:
 - Facetime / iMessage / etc. (If you want to get it working, you'll need to generate a new serial key using something such as osx-serial-generator and look up a seperate guide to get these things working on a Catalina Hackintosh. I don't use these features so I can't provide support at the moment.)
-- Mini-Displayport output
+- Mini-Displayport / VGA output
 - Bluetooth Hand-Off (due to no Bluetooth support at the moment.)
 - Airport (read under troubleshooting to give it a shot!)
 - ExpressCard (I don't have the monetary resources to acquire any ExpressCard devices to test, if you'd like to donate $20 to order one for testing check the link above!)
@@ -36,7 +36,7 @@ Virtually everything that isn't listed below.
 
 # TL;DR Installation Guide (there are more concrete guides online, but this is a short step-by-step that assumes you have at least a fledgling amount of Hackintosh literacy.)
 
-*Please note that you take full responsibility for any potential hardware damage, data loss, house fires, nuclear wars, etc. that following any of the steps in this guide may cause. I've written these steps out in laymens terms, but if there's any doubt in your mind about a step, please consult Google.* 
+*Please note that you take full responsibility for any potential hardware damage, data loss, house fires, divorces, nuclear wars, etc. that following any of the steps in this guide may cause. I've written these steps out in laymens terms, but if there's any doubt in your mind about a step, please consult Google.* 
 
 - Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), use dosdude1's Catalina patcher to create a bootable 16+GB USB device. It's essential to use this patcher to ensure that all of the hardware functions properly, and you may not be able to successfully boot without using it. 
 - Once the device has been created, go to the EFI partition of the USB device and replace the contents with the EFI folder of this repository.
