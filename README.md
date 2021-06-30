@@ -22,7 +22,7 @@ Virtually everything that isn't listed below.
 ## What Doesn't Work:
 - Bluetooth (Not sure why, any advice on this matter would be appreciated! Probably just missing a kext or two. Using BrcmPatchRAM3 and it's additional kexts doesn't seem to change anything, but YMMV.)
 - Encrypted Partitions: I don't know if my macOS USB is just faulty or what, but during my initial installations neither APFS Encrypted nor HFS encrypted would allow me to finish the installation. This may just be an oversight on my end, but don't try to encrypt your drive if you're not prepared to troubleshoot (using -v in Clover didn't provide me too much human-readable 
-- The touchpad settings screen is just blank, so you can't modify any options. There are definitely dozens of threads on many forums about this issue and possible solutions, I just haven't bothered with any yet since the default settings work well enough for me.
+- The touchpad settings screen is just blank, so you can't modify any options. This is due to the modified VoodooPS2Controller kext designed specifically for the X220 touchpad. Usually the solution to this issue would be replacing the kext with an official version, but the official version doesn't work well with the X220 touchpad (jumpy/erratic behaviour when clicking/scrolling, unbearably slow trackpoint speed etc.)
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
 
 ## Untested:
