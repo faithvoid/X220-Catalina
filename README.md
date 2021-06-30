@@ -65,8 +65,10 @@ Virtually everything that isn't listed below.
 
 
 ## Credits:
-- x-t for the initial X220 Catalina repository that this is based off of.
-- dosdude1 for creating macOS patching tools to allow older hardware to run newer oeprating systems 
+- The Clover team for pouring so much blood, sweat and tears into their bootloader
+- x-t for the initial X220 Catalina repository that this is based off of
+- dosdude1 for creating macOS patching tools to allow older hardware to run newer operating systems
+- ipang-dwi for the Intel HD 3000 2GB Legacy Video Patcher
 - More to be added!
 
-The cyberpunk in me gives endless thanks to everyone who helped make this possible. Your contributions to the Hackintosh and Thinkpad modification scenes will keep this machines alive for a good few years still. DIY or die!
+The cyberpunk in me gives endless thanks to everyone who helped make this possible. Your contributions to the Hackintosh and Thinkpad modification scenes will keep these machines alive for a good few years still. DIY or die!
