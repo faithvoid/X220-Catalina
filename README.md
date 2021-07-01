@@ -1,5 +1,5 @@
 # Lain's X220 macOS Catalina Repository
-A repository of information and kexts for running macOS Catalina on the Thinkpad X220 (and T420/T520/L420/L520) series of laptops. Largely based off of x-t's x220-catalina-efi repository, but hopefully with a few quality of life adjustments to help the X220 work as a stable daily driver, ideally without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
+A repository of information and kexts for running macOS Catalina on the Thinkpad X220 (and T420/T520/L420/L520) series of laptops. Largely based off of tluck's Lenovo-T420-Clover repository, but with a few quality of life adjustments to help the X220 work as a stable daily driver without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
 
 *Please be respectful of the fact that I may not be able to provide too much support for this. I'll update it regularly as new discoveries and modifications are made, but I very frequently take breaks from GitHub due to health issues and cannot be relied on for tech support. Consider this repo a starting point more than a finished product until stated otherwise. Thank you and stay safe!*
 
@@ -9,7 +9,7 @@ If you would like to donate so I can test out additional Thinkpad hardware (incl
 
 ## Lain's X220T Specs:
 - Model: N/A (coming soon!)
-- BIOS: McDonellTech's modified v1.46 BIOS (not fully necessary in case you're worried about bricking your system, but will definitely help improve RAM speeds, CPU performance and battery life in macOS. The BIOS installation will fail a few times so keep your laptop connected and let it run it's course until it reboots!)
+- BIOS: McDonellTech's modified v1.46 BIOS (this is possibly not fully necessary in case you're worried about bricking your system, but will definitely help improve RAM speeds, CPU performance and battery life in macOS. The BIOS installation will fail a few times so keep your laptop connected and let it run it's course until it reboots!)
 - CPU: Intel Core i5-2520M @ 2.5GHz
 - GPU: Intel HD Graphics 3000 
 - RAM: 12GB DDR3L SODIMM RAM (4+8GB)
@@ -17,21 +17,18 @@ If you would like to donate so I can test out additional Thinkpad hardware (incl
 - Wireless Card: Intel Corporation Centrino Advanced-N 6205 
 
 ## What Works:
-Virtually everything that isn't listed below. I would consider it stable enough for daily driver use, but I wouldn't say it's stable enough for mission-critical tasks (ie; 24/7 web server).
+Pretty much everything. Fully stable as a non-mission-critical daily driver, sans possible graphical glitches.
 
 ## What Doesn't Work:
-- Bluetooth (Not sure why, any advice on this matter would be appreciated! Probably just missing a kext or two. Using BrcmPatchRAM3 and it's additional kexts doesn't seem to change anything, but YMMV.)
 - Microphone Volume Adjustment (this may just be an issue with the internal sound card, I haven't tested with an external sound card yet.)
-- Encrypted Partitions: I don't know if my macOS USB is just faulty or what, but during my initial installations neither APFS Encrypted nor HFS encrypted would allow me to finish the installation. This may just be an oversight on my end, but don't try to encrypt your drive if you're not prepared to troubleshoot (using -v in Clover didn't provide me too much human-readable information.)
-- The touchpad settings screen is just blank, so you can't modify any options. This is due to the modified VoodooPS2Controller kext designed specifically for the X220 touchpad. Usually the solution to this issue would be replacing the kext with an official version, but the official version doesn't work well with the X220 touchpad (jumpy/erratic behaviour when clicking/scrolling, unbearably slow trackpoint speed etc.)
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
-- SD Card Reader (Probably just requires VoodooSDHC.kext, I haven't had time to test.)
+- Certain Wi-Fi Airport features due to using an older, modified version of AirportItlwm.kext.
 
 ## Untested:
+- Encrypted Partitions
 - Facetime / iMessage / etc. (If you want to get it working, you'll need to generate a new serial key using something such as osx-serial-generator and look up a seperate guide to get these things working on a Catalina Hackintosh. I don't use these features so I can't provide support at the moment.)
 - Mini-Displayport / VGA output
-- Bluetooth Hand-Off (due to no Bluetooth support at the moment.)
-- Airport (read under troubleshooting to give it a shot!)
+- Airport / Handoff Functionality
 - ExpressCard (I don't have the monetary resources to acquire any ExpressCard devices to test, if you'd like to donate $20 to order one for testing check the link above!)
 - Compatibility with modifications such as Coreboot, USB-C charging (should be fine as it theoretically doesn't change how the software interfaces w/ the charger but YMMV), screen mods, etc. Such modifications may require additional DDST/SDST patching.
 - Lots of other things, I'm sure. 
@@ -40,20 +37,17 @@ Virtually everything that isn't listed below. I would consider it stable enough 
 
 *Please note that you take full responsibility for any potential hardware damage, data loss, house fires, divorces, nuclear wars, etc. that following any of the steps in this guide may cause. I've written these steps out in laymens terms, but if there's any doubt in your mind about a step, please consult Google.* 
 
-- Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), use dosdude1's Catalina patcher to create a bootable 16+GB USB device. It's essential to use this patcher to ensure that all of the hardware functions properly, and you may not be able to successfully boot without using it. 
+- Using a MacOS device/VM (or Windows/Linux, but support will not be provided for that here but a quick Google search will provide tons of resources), create a bootable 16+GB Catalina USB installer. (As of the new revision, dosdude1's patcher is no longer necessary. If you do use it, **absolutely make sure** that you don't use the Legacy Wifi Patcher or you WILL bootloop. 
 - Once the device has been created, go to the EFI partition of the USB device and replace the contents with the EFI folder of this repository.
-- Boot into macOS, go to Disk Utility, then format your disk of choice as either APFS or HFS **(DO NOT USE ENCRYPTION. You will not be able to boot into the rest of the installation! You MAY be able to convert it later, but the EFI files provided will not allow you to boot an encrypted drive! I wasted 8 hours of my life before I figured this out, please don't do the same.)**
+- Boot into macOS, go to Disk Utility, then format your disk of choice as either APFS or HFS **(ENCRYPTION PROBABLY DOESN'T WORK, YOU DO SO AT YOUR OWN RISK.)**
 - Begin the installation as normal. Once the system reboots, boot back into the USB and select the drive you installed macOS on (not preboot as this may hang the system).
-- Once the installation is fully complete, reboot back into the USB, boot into the Catalina installer on the USB again and run the macOS Post-Install Patch tool with it's default options. This is important to get 512+MB of VRAM on the HD 3000 (as oppose to 384MB) and to generally rebuild the kext cache, so don't skip this part even though you're so close to the desktop!
-- Once the patcher is done, boot into macOS, install whatever patches the Patch Updater may ask you to.
-- Once you're booted into the macOS, go into the "Other" folder on your USB and install the HeliPort application to get Wi-Fi up and running.
-- To finalize everything, run Clover Configurator, mount your macOS EFI partition with it and use the Clover Cloner function to clone the EFI partition of your USB to the EFI partition of your HDD. You should now be able to boot into a perfectly usable version of macOS directly from your HDD/SSD!
+- To finalize everything, mount your EFI partition with the terminal or a program such as OpenCore Configurator, then open Finder on your USB. Copy the EFI folder from your USB to the EFI partition, replacing every file it asks you to. You should now be able to boot into a perfectly usable version of macOS directly from your HDD/SSD!
 - *Optional for users with 8+GB of RAM:* Use the Legacy Video Patcher by ipang-wi [here](https://github.com/ipang-dwi/efi-catalina/releases/tag/09.20) to patch your HD 3000 from 512MB of VRAM to 2GB of VRAM. This can help increase performance and stability in some cases. 
 
 ## Troubleshooting
 - Vertical Lines Showing Up / Occasional Hangs: This is usually caused by either too little RAM or (slightly) faulty RAM. The latest versions of macOS don't handle RAM error correction as well as Sierra and prior. I'd recommend starting with a minimum of 8GB of RAM for a stable experience. This problem appears to plague any device with an HD3000 and isn't just exclusive to Thinkpads. If the issue continues with 8+GB of RAM, try swapping RAM slots and/or running the Legacy Video Patcher [here](https://github.com/ipang-dwi/efi-catalina/releases/tag/09.20) which will patch your HD 3000 to use 2GB of VRAM instead of 512MB which has been reported to help stability. 
-- AirPort doesn't work: Replace the "itlwm" kext in your EFI/Clover with the "AirportItlwm.kext" file in the "Other" folder of the repo. Please note that this may noticeably tank your internet speeds, so I've set itlwm as the default to ensure stability/performance. **DO NOT USE BOTH DRIVERS AT ONCE. You'll probably crash your system.**
 - To use the trackpoint middle click to scroll, you'll want an app such as Smart Scroll. If you know a working free (or better yet, FOSS) alternative, please let me know, as Smart Scroll requires a paid license after a limited time trial.
+- If your Wi-Fi is slow or occasionally drops out, you can try replacing AirportItlwm.kext in the bootloader kexts folder with the regular Itlwm.kext (remember to use an application like ProperTree to create a snapshot any time you modify a kext as the bootloader needs to be aware of any changes you make!). You'll lose a lot of features including native wireless menu and AirDrop support, but it should overall be much faster and more stable. 
 
 ## TODO:
 - Move from Clover to OpenCore (I would absolutely love help with this to futureproof easily running macOS on the 220 series and keep these machines alive!).
@@ -64,13 +58,16 @@ Virtually everything that isn't listed below. I would consider it stable enough 
 ## Resources:
 - dosdude1's Catalina patcher: http://dosdude1.com/catalina/
 - x-t's repository: https://github.com/x-t/x220-catalina-efi
+- t-luck's repository: https://github.com/tluck/Lenovo-T420-Clover
+- win1010525's https://github.com/win1010525/Airportitlwm-kext
 
 
 ## Credits:
-- The Clover team for pouring so much blood, sweat and tears into their bootloader
-- x-t for the initial X220 Catalina repository that this is based off of
+- The Clover and OpenCore teams for pouring so much blood, sweat and tears into their bootloaders
+- x-t and tluck for the initial repositories that this repo is based off of
 - dosdude1 for creating macOS patching tools to allow older hardware to run newer operating systems
 - ipang-dwi for the Intel HD 3000 2GB Legacy Video Patcher
+- OpenIntelWireless team + win1010525 for their AirportItlwm kext
 - More to be added!
 
 The cyberpunk in me gives endless thanks to everyone who helped make this possible. Your contributions to the Hackintosh and Thinkpad modification scenes will keep these machines alive for a good few years still. DIY or die!
