@@ -51,7 +51,8 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 - If your Wi-Fi is slow or occasionally drops out, you can try replacing AirportItlwm.kext in the bootloader kexts folder with the regular Itlwm.kext (remember to use an application like ProperTree to create a snapshot any time you modify a kext as the bootloader needs to be aware of any changes you make!). You'll lose a lot of features including native wireless menu and AirDrop support, but it should overall be much faster and more stable. 
 
 ## TODO:
-- Attempt to use this configuration to boot Big Sur. In my testing it IS possible to use these files to get into a working installation of Big Sur (and possibly Monterey), but patching the HD3000 on either OS is outside of the scope of my abilities (and Patched-Sur unfortunately kept leading to bootloops once patches are applied, possibly linked to the same legacy wireless driver issue listed above).
+- Figure out how to enable SecureBootModel without bootlooping to use a newer version of AirportItlwm.
+- Attempt to use this configuration to boot Big Sur. In my testing it IS possible to use these files to get into a working installation of Big Sur (and possibly Monterey), but patching the HD3000 on either OS is outside of the scope of my abilities (as the legacy video patcher doesn't seem to work on either), and without graphical acceleration Sur feels awful to use, and I'm sure Monterey does too. You can check my X220-BigSur repository for more updates, but expect them to be slow as I'm quite comfortable running Catalina as my daily driver.
 - Remember to keep this repository updated.
 
 ## Resources:
