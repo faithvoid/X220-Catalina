@@ -51,10 +51,8 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 - If your Wi-Fi is slow or occasionally drops out, you can try replacing AirportItlwm.kext in the bootloader kexts folder with the regular Itlwm.kext (remember to use an application like ProperTree to create a snapshot any time you modify a kext as the bootloader needs to be aware of any changes you make!). You'll lose a lot of features including native wireless menu and AirDrop support, but it should overall be much faster and more stable. 
 
 ## TODO:
-- Move from Clover to OpenCore (I would absolutely love help with this to futureproof easily running macOS on the 220 series and keep these machines alive!).
-- Possibly create an alternate config.plist to disable touchscreens on the X220T if you're like me and have a shattered digitizer. If you have any knowledge as to how to disable a single USB port / hub on macOS (ideally using Clover), please let me know!
-- Figure out if it's safe on the X220 to raise the macOS VRAM amount from 512MB to 1GB for faster video acceleration, as there are plenty of guides on how to do it for official Macbooks of the same specs (useful for things like video/photo editing, not so useful for gaming! The main caveat being of course that's 512MB less RAM for the system to use.)
-- See if this setup works on macOS Big Sur or not (it probably won't, and I won't try any time soon due to hearing that Sur is unstable even on real hardware, but if anyone wants to give it a shot using BenSova's Big Sur patcher instead of dosdude1's Catalina patcher please report back!)
+- Attempt to use this configuration to boot Big Sur. In my testing it IS possible to use these files to get into a working installation of Big Sur (and possibly Monterey), but patching the HD3000 on either OS is outside of the scope of my abilities (and Patched-Sur unfortunately kept leading to bootloops once patches are applied, possibly linked to the same legacy wireless driver issue listed above).
+- Remember to keep this repository updated.
 
 ## Resources:
 - dosdude1's Catalina patcher: http://dosdude1.com/catalina/
