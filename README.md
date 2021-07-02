@@ -23,6 +23,7 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 - Microphone Volume Adjustment (this may just be an issue with the internal sound card, I haven't tested with an external sound card yet.)
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
 - Certain Wi-Fi Airport features due to using an older, modified version of AirportItlwm.kext.
+- Keka (third-party file archiver) MAY crash your system the first time it boots (and only the first time). This happened twice to me on two different installations while testing. If you're going to install it, make sure you have nothing important open.
 
 ## Untested:
 - Encrypted Partitions
