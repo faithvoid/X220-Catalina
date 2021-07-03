@@ -10,7 +10,7 @@ Largely based off of tluck's Lenovo-T420-Clover repository, but with a few quali
 If you would like to donate so I can test out additional Thinkpad hardware (including repairing my X1C1 to further optimize macOS potential), my PayPal is [here!](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=8GF4A3XS7ZHFY) 
 
 ## Lain's X220T Specs:
-- Model: N/A (coming soon!)
+- Model: 42962WU
 - BIOS: McDonellTech's modified v1.46 BIOS (this is possibly not fully necessary in case you're worried about bricking your system, but will definitely help improve RAM speeds, CPU performance and battery life in macOS. The BIOS installation will fail a few times so keep your laptop connected and let it run it's course until it reboots!)
 - CPU: Intel Core i5-2520M @ 2.5GHz
 - GPU: Intel HD Graphics 3000 
