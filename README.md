@@ -24,7 +24,7 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 ## What Doesn't Work:
 - Microphone Volume Adjustment (this may just be an issue with the internal sound card, I haven't tested with an external sound card yet.)
 - X220T-specific: Tablet Screen Buttons (Only Power works, I know there's definietly a way to remap the other buttons, as I did in macOS Sierra years ago, but I've forgotten how, haha.)
-- Certain Wi-Fi Airport features due to using an older, modified version of AirportItlwm.kext.
+- Certain Airport/Airdrop features.
 - Some applications MAY crash your system the first time they're run. This happened twice to me on two different installations while testing. If you're going to install a program, make sure you have nothing important open when you run it for the first time. 
 
 ## Untested:
