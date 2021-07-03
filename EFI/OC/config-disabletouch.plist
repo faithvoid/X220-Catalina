@@ -706,7 +706,7 @@
 			<key>#HideSelf</key>
 			<true/>
 			<key>ConsoleAttributes</key>
-			<integer>0</integer>
+			<integer>0x70</integer>
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
@@ -860,7 +860,7 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>W892248024NDM6D1H</string>
+			<string>W89218403GUDM6DA8</string>
 			<key>ROM</key>
 			<data>ESIzRFVm</data>
 			<key>SpoofVendor</key>
@@ -868,9 +868,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>W89HVVZJDH2G</string>
+			<string>W89HNSY4DH2G</string>
 			<key>SystemUUID</key>
-			<string>523F058A-89CF-4EA8-8C6F-6EA9BF0FC2D9</string>
+			<string>013AC5A4-8BED-4FF6-B3D8-7EDB85ADF811</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -985,7 +985,7 @@
 			<key>AppleRtcRam</key>
 			<false/>
 			<key>AppleSmcIo</key>
-			<false/>
+			<true/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
 			<key>DataHub</key>
@@ -993,7 +993,7 @@
 			<key>DeviceProperties</key>
 			<true/>
 			<key>FirmwareVolume</key>
-			<false/>
+			<true/>
 			<key>HashServices</key>
 			<true/>
 			<key>OSInfo</key>
