@@ -49,6 +49,7 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 
 ## Troubleshooting
 - Vertical Lines Showing Up / Occasional Hangs: This is usually caused by either too little RAM or (slightly) faulty RAM. The latest versions of macOS don't handle RAM error correction as well as Sierra and prior. I'd recommend starting with a minimum of 8GB of RAM for a stable experience. This problem appears to plague any device with an HD3000 and isn't just exclusive to Thinkpads. If the issue continues with 8+GB of RAM, try swapping RAM slots and/or running the Legacy Video Patcher [here](https://github.com/ipang-dwi/efi-catalina/releases/tag/09.20) which will patch your HD 3000 to use 2GB of VRAM instead of 512MB which has been reported to help stability. 
+- Alternatively, if you experiences hangs where the cursor is still moving, go to System Preferences -> General -> Hot Corners and enable a hot corner for display sleep. If your system hangs, move your mouse to this corner and you should be dropped to the login screen and things should work. An annoying workaround, but better than rebooting. 
 - If your Wi-Fi is slow or occasionally drops out, you can try replacing AirportItlwm.kext in the bootloader kexts folder with the regular Itlwm.kext (remember to use an application like ProperTree to create a snapshot any time you modify a kext as the bootloader needs to be aware of any changes you make!). You'll lose a lot of features including native wireless menu and AirDrop support, but it should overall be much faster and more stable. 
 
 ## TODO:
