@@ -1,4 +1,5 @@
 # Lain's X220 macOS Catalina Repository
+## UPDATE: As of August 1st, 2021, I've rolled my personal X220T back to macOS Mojave due to needing 32-bit support for older audio hardware and applications. I won't be able to provide any support with Catalina, but the project is in a fairly usable daily driver state, aside from. If you'd like to donate to get my older busted-up X220T a hard drive to test Catalina or upwards on, please donate to my PayPal linked below! 
 A repository of information and kexts for running macOS Catalina on the Thinkpad X220 series of laptops. (This should also work on T420/T520/L420/L520 devices, but if your resolution is higher than 1366x768 you'll need to replace the config.plist EDID as all the defaults are aimed at the stock X220/X220T.)
 
 Largely based off of tluck's Lenovo-T420-Clover repository, but with a few quality of life adjustments to help the X220 work as a stable daily driver without external hardware modifications. Please feel free to make your own forks of this repository to help keep the 220 series a solid choice for a Hackintosh laptop!
@@ -7,7 +8,7 @@ Largely based off of tluck's Lenovo-T420-Clover repository, but with a few quali
 
 ![Screenshot from my trusty X220 running Catalina!](x220catalina.png)
 
-If you would like to donate so I can test out additional Thinkpad hardware (including repairing my X1C1 to further optimize macOS potential), my PayPal is [here!](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=8GF4A3XS7ZHFY) 
+If you would like to donate so I can test out additional hardware and functionality, my PayPal is [here!](https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=8GF4A3XS7ZHFY) 
 
 ## Lain's X220T Specs:
 - Model: 42962WU
@@ -48,12 +49,12 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 - *Optional for X220T users:* If you'd like to disable touchscreen functionality (in case it misbehaves or you have a broken digitizer like I do), you can use the alternate config-disabletouch.plist 
 
 ## Troubleshooting
-- Vertical Lines Showing Up / Occasional Hangs: This is usually caused by either too little RAM or (slightly) faulty RAM. The latest versions of macOS don't handle RAM error correction as well as Sierra and prior. I'd recommend starting with a minimum of 8GB of RAM for a stable experience. This problem appears to plague any device with an HD3000 and isn't just exclusive to Thinkpads. If the issue continues with 8+GB of RAM, try swapping RAM slots and/or running the Legacy Video Patcher [here](https://github.com/ipang-dwi/efi-catalina/releases/tag/09.20) which will patch your HD 3000 to use 2GB of VRAM instead of 512MB which has been reported to help stability. 
-- Alternatively, if you experiences hangs where the cursor is still moving, go to System Preferences -> General -> Hot Corners and enable a hot corner for display sleep. If your system hangs, move your mouse to this corner and you should be dropped to the login screen and things should work. An annoying workaround, but better than rebooting. 
+- Vertical Lines Showing Up / Occasional Hangs: This is usually caused by either too little RAM or (slightly) faulty RAM.Apparently the latest versions of macOS don't handle RAM error correction as well as Sierra and prior. I'd recommend starting with a minimum of 8GB of RAM for a stable experience. This problem appears to plague any device with an HD3000 and isn't just exclusive to Thinkpads. If the issue continues with 8+GB of RAM, try swapping RAM slots and/or running the Legacy Video Patcher [here](https://github.com/ipang-dwi/efi-catalina/releases/tag/09.20) which will patch your HD 3000 to use 2GB of VRAM instead of 512MB which has been reported to help stability, but YMMV.
+- Alternatively, if you experiences hangs where the cursor is still moving, go to System Preferences -> General -> Hot Corners and enable a hot corner for display sleep. If your system hangs, move your mouse to this corner and you should be dropped to the login screen and things should work. An annoying workaround, but better than rebooting. This may also be caused by the sleep function, but I can't guarantee that, or troubleshoot it at the moment.
 - If your Wi-Fi is slow or occasionally drops out, you can try replacing AirportItlwm.kext in the bootloader kexts folder with the regular Itlwm.kext (remember to use an application like ProperTree to create a snapshot any time you modify a kext as the bootloader needs to be aware of any changes you make!). You'll lose a lot of features including native wireless menu and AirDrop support, but it should overall be much faster and more stable. 
 
 ## TODO:
-- Attempt to use this configuration to boot Big Sur. In my testing it IS possible to use these files to get into a working installation of Big Sur (and possibly Monterey), but patching the HD3000 on either OS is outside of the scope of my abilities (as the legacy video patcher doesn't seem to work on either), and without graphical acceleration Sur feels awful to use, and I'm sure Monterey does too. You can check my X220-BigSur repository for more updates, but expect them to be slow as I'm quite comfortable running Catalina as my daily driver.
+- Attempt to use this configuration to boot Big Sur. In my testing it IS possible to use these files to get into a working installation of Big Sur (and possibly Monterey), but patching the HD3000 on either OS is outside of the scope of my abilities (as the legacy video patcher doesn't seem to work on either), and without graphical acceleration Sur feels awful to use, and I'm sure Monterey does too. You can check my X220-BigSur repository for more updates, but expect them to be slow as I'm quite comfortable running ~~Catalina~~ Mojave as my daily driver.
 - Remember to keep this repository updated.
 
 ## Resources:
