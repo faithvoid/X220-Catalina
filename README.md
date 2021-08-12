@@ -32,7 +32,7 @@ Pretty much everything. Fully stable as a non-mission-critical daily driver, san
 - Facetime / iMessage / etc. (If you want to get it working, you'll need to generate a new serial key using something such as osx-serial-generator and look up a seperate guide to get these to work. I don't use these features so I can't provide support at the moment.)
 - Mini-Displayport / VGA output
 - Airport / Handoff Functionality
-- ExpressCard (I don't have the monetary resources to acquire any ExpressCard devices to test, if you'd like to donate $20 to order one for testing check the link above!)
+- ExpressCard. It should work in Catalina, as it works on my X220T in Mojave with the same EFI config, but YMMV.
 - Compatibility with modifications such as Coreboot, USB-C charging (should be fine as it theoretically doesn't change how the software interfaces w/ the charger but YMMV), screen mods, etc. Such modifications may require additional DDST/SDST patching.
 - Lots of other things, I'm sure. 
 
